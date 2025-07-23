@@ -5,7 +5,7 @@ Uso: python activate_premium_console.py <guild_id> <meses>
 """
 
 import sys
-from server_premium import add_premium_server
+from bot.server_premium import add_premium_server
 from datetime import datetime
 
 def activate_premium_by_id(guild_id, guild_name, months=1):

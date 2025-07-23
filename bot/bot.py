@@ -5,8 +5,8 @@ import yt_dlp
 import os
 from discord import FFmpegPCMAudio
 from datetime import datetime
-from server_premium import is_premium_server, check_server_limits, get_server_premium_status, add_premium_server, get_all_premium_servers
-from config import YOUR_USER_ID, BOT_TOKEN, PATREON_LINK, CONTACT_LINK
+from bot.server_premium import is_premium_server, check_server_limits, get_server_premium_status, add_premium_server, get_all_premium_servers
+from bot.config import YOUR_USER_ID, BOT_TOKEN, PATREON_LINK, CONTACT_LINK
 
 # Configuración del bot
 intents = discord.Intents.default()
@@ -172,7 +172,7 @@ async def help_command(ctx):
     
     # Usar la imagen kawaii como thumbnail
     try:
-        file = discord.File("tmpj48fcvq1.webp", filename="kawaii_help.webp")
+        file = discord.File("web/tmpj48fcvq1.webp", filename="kawaii_help.webp")
         embed.set_thumbnail(url="attachment://kawaii_help.webp")
         
         embed.set_footer(
@@ -238,7 +238,7 @@ async def play(ctx, *, url):
         )
         
         # Usar la imagen kawaii como thumbnail
-        file = discord.File("tmpj48fcvq1.webp", filename="kawaii_avatar.webp")
+        file = discord.File("web/tmpj48fcvq1.webp", filename="kawaii_avatar.webp")
         embed.set_thumbnail(url="attachment://kawaii_avatar.webp")
         
         # Crear vista con botones
@@ -436,7 +436,7 @@ async def server_status(ctx):
         embed.add_field(name="Expira", value=status['expires'].strftime('%d/%m/%Y'), inline=True)
         embed.add_field(name="Días restantes", value=f"{status['days_left']} días", inline=True)
     else:
-        from server_premium import server_usage
+        from bot.server_premium import server_usage
         guild_id = str(ctx.guild.id)
         today = datetime.now().strftime('%Y-%m-%d')
         
@@ -520,7 +520,7 @@ async def deactivate_premium(ctx, guild_id: int = None):
     
     target_guild_id = guild_id or ctx.guild.id
     
-    from server_premium import load_premium_servers, save_premium_servers
+    from bot.server_premium import load_premium_servers, save_premium_servers
     premium_servers = load_premium_servers()
     
     if str(target_guild_id) in premium_servers:

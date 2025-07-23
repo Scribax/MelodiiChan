@@ -9,7 +9,7 @@ import hashlib
 import hmac
 import json
 from datetime import datetime
-from server_premium import add_premium_server, get_server_premium_status
+from bot.server_premium import add_premium_server, get_server_premium_status
 import logging
 
 # Configuración
