@@ -38,8 +38,8 @@ VoiceMaster es un bot de Discord súper kawaii que gestiona automáticamente los
 
 1. **Clona el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/voicemaster-bot.git
-   cd voicemaster-bot
+   git clone https://github.com/Scribax/MelodiiChan.git
+   cd MelodiiChan
    ```
 
 2. **Instala las dependencias**
@@ -151,9 +151,9 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
 ¿Necesitas ayuda? ¡Estamos aquí para ti!
 
-- 📧 **Email**: tu-email@ejemplo.com
-- 💬 **Discord**: Tu servidor de Discord
-- 🐛 **Issues**: [GitHub Issues](https://github.com/tu-usuario/voicemaster-bot/issues)
+- 📧 **Email**: francodemartos2025@gmail.com
+- 💬 **Discord**: @scribax
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Scribax/MelodiiChan/issues)
 
 ## 🌟 Agradecimientos
 
